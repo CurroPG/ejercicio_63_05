@@ -40,34 +40,34 @@ public class App {
             if(altura1 < altura2){
                 alturaDif = altura2 - altura1;
                 if(alturaDif <= base){
-                    for(int i = 0; i < espacios2; i++){
+                    for(int i = 0; i < espacios1; i++){
+                        System.out.print(" ");
+                    }
+                    for(int i = 0; i < linea1; i++){
+                        System.out.print("*");
+                    }
+                    linea1 += 2;
+                    espacios1--;
+                }
+                if(alturaDif > base){
+                    for(int i = 0; i <= (espacios2+(altura1 * 2 - 1)) ; i++){
                         System.out.print(" ");
                     }
                     for(int i = 0; i < linea2; i++){
                         System.out.print("*");
                     }
-                    linea2 += 2;
-                    espacios2--;
-                }
-                if(alturaDif > base){
-                    for(int i = 0; i <= (espacios1+(altura2 * 2 - 1)) ; i++){
-                        System.out.print(" ");
-                    }
-                    for(int i = 0; i < linea1; i++){
-                        System.out.print("*");
-                    }
                 }else{
-                    for(int i = 0; i <= ((espacios1+(altura2 * 2)) - espacios2 - linea2) ; i++){
+                    for(int i = 0; i <= ((espacios2+(altura1 * 2)) - espacios1 - linea1) ; i++){
                         System.out.print(" ");
                     }
-                    for(int i = 0; i < linea1; i++){
+                    for(int i = 0; i < linea2; i++){
                         System.out.print("*");
                     }
                 }
                 System.out.println();
                 base++;
-                espacios1--;
-                linea1 += 2;
+                espacios2--;
+                linea2 += 2;
             }
         }
     }
